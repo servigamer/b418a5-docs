@@ -1,0 +1,1373 @@
+
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+        <meta
+            name="description"
+            content="Documentation for the English Learning Platform API"
+        >
+    <title>English Learning Platform API Reference</title>
+
+    <style media="screen">
+      .highlight table td { padding: 5px; }
+.highlight table pre { margin: 0; }
+.highlight .gh {
+  color: #999999;
+}
+.highlight .sr {
+  color: #f6aa11;
+}
+.highlight .go {
+  color: #888888;
+}
+.highlight .gp {
+  color: #555555;
+}
+.highlight .gs {
+}
+.highlight .gu {
+  color: #aaaaaa;
+}
+.highlight .nb {
+  color: #f6aa11;
+}
+.highlight .cm {
+  color: #75715e;
+}
+.highlight .cp {
+  color: #75715e;
+}
+.highlight .c1 {
+  color: #75715e;
+}
+.highlight .cs {
+  color: #75715e;
+}
+.highlight .c, .highlight .ch, .highlight .cd, .highlight .cpf {
+  color: #75715e;
+}
+.highlight .err {
+  color: #960050;
+}
+.highlight .gr {
+  color: #960050;
+}
+.highlight .gt {
+  color: #960050;
+}
+.highlight .gd {
+  color: #49483e;
+}
+.highlight .gi {
+  color: #49483e;
+}
+.highlight .ge {
+  color: #49483e;
+}
+.highlight .kc {
+  color: #66d9ef;
+}
+.highlight .kd {
+  color: #66d9ef;
+}
+.highlight .kr {
+  color: #66d9ef;
+}
+.highlight .no {
+  color: #66d9ef;
+}
+.highlight .kt {
+  color: #66d9ef;
+}
+.highlight .mf {
+  color: #ae81ff;
+}
+.highlight .mh {
+  color: #ae81ff;
+}
+.highlight .il {
+  color: #ae81ff;
+}
+.highlight .mi {
+  color: #ae81ff;
+}
+.highlight .mo {
+  color: #ae81ff;
+}
+.highlight .m, .highlight .mb, .highlight .mx {
+  color: #ae81ff;
+}
+.highlight .sc {
+  color: #ae81ff;
+}
+.highlight .se {
+  color: #ae81ff;
+}
+.highlight .ss {
+  color: #ae81ff;
+}
+.highlight .sd {
+  color: #e6db74;
+}
+.highlight .s2 {
+  color: #e6db74;
+}
+.highlight .sb {
+  color: #e6db74;
+}
+.highlight .sh {
+  color: #e6db74;
+}
+.highlight .si {
+  color: #e6db74;
+}
+.highlight .sx {
+  color: #e6db74;
+}
+.highlight .s1 {
+  color: #e6db74;
+}
+.highlight .s, .highlight .sa, .highlight .dl {
+  color: #e6db74;
+}
+.highlight .na {
+  color: #a6e22e;
+}
+.highlight .nc {
+  color: #a6e22e;
+}
+.highlight .nd {
+  color: #a6e22e;
+}
+.highlight .ne {
+  color: #a6e22e;
+}
+.highlight .nf, .highlight .fm {
+  color: #a6e22e;
+}
+.highlight .vc {
+  color: #ffffff;
+}
+.highlight .nn {
+  color: #ffffff;
+}
+.highlight .ni {
+  color: #ffffff;
+}
+.highlight .bp {
+  color: #ffffff;
+}
+.highlight .vg {
+  color: #ffffff;
+}
+.highlight .vi {
+  color: #ffffff;
+}
+.highlight .nv, .highlight .vm {
+  color: #ffffff;
+}
+.highlight .w {
+  color: #ffffff;
+}
+.highlight {
+  color: #ffffff;
+}
+.highlight .n, .highlight .py, .highlight .nx {
+  color: #ffffff;
+}
+.highlight .nl {
+  color: #f92672;
+}
+.highlight .ow {
+  color: #f92672;
+}
+.highlight .nt {
+  color: #f92672;
+}
+.highlight .k, .highlight .kv {
+  color: #f92672;
+}
+.highlight .kn {
+  color: #f92672;
+}
+.highlight .kp {
+  color: #f92672;
+}
+.highlight .o {
+  color: #f92672;
+}
+    </style>
+    <style media="print">
+      * {
+        -webkit-transition:none!important;
+        transition:none!important;
+      }
+      .highlight table td { padding: 5px; }
+.highlight table pre { margin: 0; }
+.highlight, .highlight .w {
+  color: #586e75;
+}
+.highlight .err {
+  color: #002b36;
+  background-color: #dc322f;
+}
+.highlight .c, .highlight .ch, .highlight .cd, .highlight .cm, .highlight .cpf, .highlight .c1, .highlight .cs {
+  color: #657b83;
+}
+.highlight .cp {
+  color: #b58900;
+}
+.highlight .nt {
+  color: #b58900;
+}
+.highlight .o, .highlight .ow {
+  color: #93a1a1;
+}
+.highlight .p, .highlight .pi {
+  color: #93a1a1;
+}
+.highlight .gi {
+  color: #859900;
+}
+.highlight .gd {
+  color: #dc322f;
+}
+.highlight .gh {
+  color: #268bd2;
+  background-color: #002b36;
+  font-weight: bold;
+}
+.highlight .k, .highlight .kn, .highlight .kp, .highlight .kr, .highlight .kv {
+  color: #6c71c4;
+}
+.highlight .kc {
+  color: #cb4b16;
+}
+.highlight .kt {
+  color: #cb4b16;
+}
+.highlight .kd {
+  color: #cb4b16;
+}
+.highlight .s, .highlight .sb, .highlight .sc, .highlight .dl, .highlight .sd, .highlight .s2, .highlight .sh, .highlight .sx, .highlight .s1 {
+  color: #859900;
+}
+.highlight .sa {
+  color: #6c71c4;
+}
+.highlight .sr {
+  color: #2aa198;
+}
+.highlight .si {
+  color: #d33682;
+}
+.highlight .se {
+  color: #d33682;
+}
+.highlight .nn {
+  color: #b58900;
+}
+.highlight .nc {
+  color: #b58900;
+}
+.highlight .no {
+  color: #b58900;
+}
+.highlight .na {
+  color: #268bd2;
+}
+.highlight .m, .highlight .mb, .highlight .mf, .highlight .mh, .highlight .mi, .highlight .il, .highlight .mo, .highlight .mx {
+  color: #859900;
+}
+.highlight .ss {
+  color: #859900;
+}
+    </style>
+    <link href="stylesheets/screen-c9d8fa83.css" rel="stylesheet" media="screen" />
+    <link href="stylesheets/print-953e3353.css" rel="stylesheet" media="print" />
+      <script src="javascripts/all-b12a2749.js"></script>
+
+    <script>
+      $(function() { setupCodeCopy(); });
+    </script>
+  </head>
+
+  <body class="index" data-languages="[&quot;shell&quot;]">
+    <a href="#" id="nav-button">
+      <span>
+        NAV
+        <img src="images/navbar-cad8cdcb.png" alt="" />
+      </span>
+    </a>
+    <div class="toc-wrapper">
+      <img src="images/logo-484e8178.svg" class="logo" alt="" />
+        <div class="lang-selector">
+              <a href="#" data-language-name="shell">shell</a>
+        </div>
+        <div class="search">
+          <input type="text" class="search" id="input-search" placeholder="Search">
+        </div>
+        <ul class="search-results"></ul>
+      <ul id="toc" class="toc-list-h1">
+          <li>
+            <a href="#introduction" class="toc-h1 toc-link" data-title="Introduction">Introduction</a>
+          </li>
+          <li>
+            <a href="#assignments" class="toc-h1 toc-link" data-title="Assignments">Assignments</a>
+              <ul class="toc-list-h2">
+                  <li>
+                    <a href="#the-assignment-object" class="toc-h2 toc-link" data-title="The assignment object">The assignment object</a>
+                  </li>
+                  <li>
+                    <a href="#get-all-assignments" class="toc-h2 toc-link" data-title="Get All Assignments">Get All Assignments</a>
+                  </li>
+                  <li>
+                    <a href="#get-a-specific-assignment" class="toc-h2 toc-link" data-title="Get a Specific Assignment">Get a Specific Assignment</a>
+                  </li>
+                  <li>
+                    <a href="#delete-a-specific-assignment" class="toc-h2 toc-link" data-title="Delete a Specific Assignment">Delete a Specific Assignment</a>
+                  </li>
+              </ul>
+          </li>
+          <li>
+            <a href="#attendances" class="toc-h1 toc-link" data-title="Attendances">Attendances</a>
+              <ul class="toc-list-h2">
+                  <li>
+                    <a href="#the-attendance-object" class="toc-h2 toc-link" data-title="The attendance object">The attendance object</a>
+                  </li>
+                  <li>
+                    <a href="#get-all-attendances" class="toc-h2 toc-link" data-title="Get All Attendances">Get All Attendances</a>
+                  </li>
+                  <li>
+                    <a href="#get-a-specific-attendance" class="toc-h2 toc-link" data-title="Get a Specific Attendance">Get a Specific Attendance</a>
+                  </li>
+                  <li>
+                    <a href="#delete-a-specific-attendance" class="toc-h2 toc-link" data-title="Delete a Specific Attendance">Delete a Specific Attendance</a>
+                  </li>
+              </ul>
+          </li>
+          <li>
+            <a href="#courses" class="toc-h1 toc-link" data-title="Courses">Courses</a>
+              <ul class="toc-list-h2">
+                  <li>
+                    <a href="#the-course-object" class="toc-h2 toc-link" data-title="The course object">The course object</a>
+                  </li>
+                  <li>
+                    <a href="#get-all-courses" class="toc-h2 toc-link" data-title="Get All Courses">Get All Courses</a>
+                  </li>
+                  <li>
+                    <a href="#get-a-specific-course" class="toc-h2 toc-link" data-title="Get a Specific Course">Get a Specific Course</a>
+                  </li>
+                  <li>
+                    <a href="#delete-a-specific-course" class="toc-h2 toc-link" data-title="Delete a Specific Course">Delete a Specific Course</a>
+                  </li>
+              </ul>
+          </li>
+          <li>
+            <a href="#feedback" class="toc-h1 toc-link" data-title="Feedback">Feedback</a>
+              <ul class="toc-list-h2">
+                  <li>
+                    <a href="#the-feedback-object" class="toc-h2 toc-link" data-title="The feedback object">The feedback object</a>
+                  </li>
+                  <li>
+                    <a href="#get-all-feedback" class="toc-h2 toc-link" data-title="Get All Feedback">Get All Feedback</a>
+                  </li>
+                  <li>
+                    <a href="#get-a-specific-feedback" class="toc-h2 toc-link" data-title="Get a Specific Feedback">Get a Specific Feedback</a>
+                  </li>
+                  <li>
+                    <a href="#delete-a-specific-feedback" class="toc-h2 toc-link" data-title="Delete a Specific Feedback">Delete a Specific Feedback</a>
+                  </li>
+              </ul>
+          </li>
+          <li>
+            <a href="#files" class="toc-h1 toc-link" data-title="Files">Files</a>
+              <ul class="toc-list-h2">
+                  <li>
+                    <a href="#the-file-object" class="toc-h2 toc-link" data-title="The file object">The file object</a>
+                  </li>
+                  <li>
+                    <a href="#get-all-files" class="toc-h2 toc-link" data-title="Get All Files">Get All Files</a>
+                  </li>
+                  <li>
+                    <a href="#get-a-specific-file" class="toc-h2 toc-link" data-title="Get a Specific File">Get a Specific File</a>
+                  </li>
+                  <li>
+                    <a href="#delete-a-specific-file" class="toc-h2 toc-link" data-title="Delete a Specific File">Delete a Specific File</a>
+                  </li>
+              </ul>
+          </li>
+          <li>
+            <a href="#users" class="toc-h1 toc-link" data-title="Users">Users</a>
+              <ul class="toc-list-h2">
+                  <li>
+                    <a href="#the-user-object" class="toc-h2 toc-link" data-title="The user object">The user object</a>
+                  </li>
+                  <li>
+                    <a href="#get-all-users" class="toc-h2 toc-link" data-title="Get All Users">Get All Users</a>
+                  </li>
+                  <li>
+                    <a href="#get-a-specific-user" class="toc-h2 toc-link" data-title="Get a Specific User">Get a Specific User</a>
+                  </li>
+                  <li>
+                    <a href="#delete-a-specific-user" class="toc-h2 toc-link" data-title="Delete a Specific User">Delete a Specific User</a>
+                  </li>
+              </ul>
+          </li>
+          <li>
+            <a href="#errors" class="toc-h1 toc-link" data-title="Errors">Errors</a>
+          </li>
+      </ul>
+        <ul class="toc-footer">
+            <li><a href='#'>Sign Up for a Developer Key</a></li>
+        </ul>
+    </div>
+    <div class="page-wrapper">
+      <div class="dark-box"></div>
+      <div class="content">
+        <h1 id='introduction'>Introduction</h1>
+<p>Welcome to the English Learning Platform API! You can use our API to access English Learning Platform API endpoints, which can get information on various assignments, attendances, courses, feedback, files and users in our database.</p>
+
+<p>We have language bindings in TypeScript! You can view code examples in the dark area to the right, and you can switch the programming language of the examples with the tabs in the top right.</p>
+
+<p>This example API documentation page was created with <a href="https://github.com/slatedocs/slate">Slate</a>. Feel free to edit it and use it as a base for your own API&#39;s documentation.</p>
+<h1 id='assignments'>Assignments</h1><h2 id='the-assignment-object'>The assignment object</h2>
+<p>The assignment object.</p>
+
+<blockquote>
+<p>The assignment object:</p>
+</blockquote>
+<div class="highlight"><pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+  </span><span class="nl">"id"</span><span class="p">:</span><span class="mi">1</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"title"</span><span class="p">:</span><span class="s2">"HW: Activity 1"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"date"</span><span class="p">:</span><span class="s2">"2021-09-15T19:37:30"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"dueDate"</span><span class="p">:</span><span class="s2">"2021-12-31"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"fileName"</span><span class="p">:</span><span class="s2">"activity-1.docx"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"lastUpdated"</span><span class="p">:</span><span class="s2">"2021-09-15T19:37:30"</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre></div><h3 id='attributes'>Attributes</h3>
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th style="text-align: left">Type</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>id</td>
+<td style="text-align: left">int</td>
+<td>Unique identifier for the object.</td>
+</tr>
+<tr>
+<td>title</td>
+<td style="text-align: left">String</td>
+<td>The assignment’s title.</td>
+</tr>
+<tr>
+<td>date</td>
+<td style="text-align: left">Date</td>
+<td>The assignment’s date.</td>
+</tr>
+<tr>
+<td>dueDate</td>
+<td style="text-align: left">Date</td>
+<td>The assignment’s due date.</td>
+</tr>
+<tr>
+<td>fileName</td>
+<td style="text-align: left">String</td>
+<td>The assignment’s file name.</td>
+</tr>
+<tr>
+<td>lastUpdated</td>
+<td style="text-align: left">Date</td>
+<td>The assignment’s last updated.</td>
+</tr>
+</tbody></table>
+<h2 id='get-all-assignments'>Get All Assignments</h2><div class="highlight"><pre class="highlight shell tab-shell"><code>curl <span class="s1">'https://b418a5.herokuapp.com/api/assignments'</span>
+</code></pre></div>
+<blockquote>
+<p>The above command returns JSON structured like this:</p>
+</blockquote>
+<div class="highlight"><pre class="highlight json tab-json"><code><span class="p">[</span><span class="w">
+  </span><span class="p">{</span><span class="w">
+    </span><span class="nl">"id"</span><span class="p">:</span><span class="mi">1</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"date"</span><span class="p">:</span><span class="s2">"2021-09-15T19:37:30"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"note"</span><span class="p">:</span><span class="s2">""</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"present"</span><span class="p">:</span><span class="kc">true</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"late"</span><span class="p">:</span><span class="kc">false</span><span class="w">
+  </span><span class="p">}</span><span class="w">
+  </span><span class="p">{</span><span class="err">...</span><span class="p">},</span><span class="w">
+  </span><span class="p">{</span><span class="err">...</span><span class="p">}</span><span class="w">
+</span><span class="p">]</span><span class="w">
+</span></code></pre></div>
+<p>This endpoint retrieves all assignments.</p>
+<h3 id='http-request'>HTTP Request</h3>
+<p><code>GET https://b418a5.herokuapp.com/api/assignments</code></p>
+<h3 id='parameters'>Parameters</h3>
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>course_id</td>
+<td>Only return assignments with the given course id.</td>
+</tr>
+<tr>
+<td>student_id</td>
+<td>Only return assignments with the given student id.</td>
+</tr>
+</tbody></table>
+<h3 id='returns'>Returns</h3>
+<p>Returns a list of all assignments query runs.</p>
+
+<aside class="success">
+Remember — a happy user is an authenticated user!
+</aside>
+<h2 id='get-a-specific-assignment'>Get a Specific Assignment</h2><div class="highlight"><pre class="highlight shell tab-shell"><code>curl <span class="s1">'https://b418a5.herokuapp.com/api/assignments/1'</span>
+</code></pre></div>
+<blockquote>
+<p>The above command returns JSON structured like this:</p>
+</blockquote>
+<div class="highlight"><pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+  </span><span class="nl">"id"</span><span class="p">:</span><span class="mi">1</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"date"</span><span class="p">:</span><span class="s2">"2021-09-15T19:37:30"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"note"</span><span class="p">:</span><span class="s2">""</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"present"</span><span class="p">:</span><span class="kc">true</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"late"</span><span class="p">:</span><span class="kc">false</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre></div>
+<p>This endpoint retrieves a specific assignment.</p>
+
+<aside class="warning">Inside HTML code blocks like this one, you can't use Markdown, so use <code>&lt;code&gt;</code> blocks to denote code.</aside>
+<h3 id='http-request-2'>HTTP Request</h3>
+<p><code>GET https://b418a5.herokuapp.com/api/assignments/&lt;id&gt;</code></p>
+<h3 id='url-parameters'>URL Parameters</h3>
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>id</td>
+<td>The id of the assignment to retrieve</td>
+</tr>
+<tr>
+<td>course_id</td>
+<td>Only return assignments with the given student id.</td>
+</tr>
+<tr>
+<td>student_id</td>
+<td>Only return assignments with the given student id.</td>
+</tr>
+</tbody></table>
+<h2 id='delete-a-specific-assignment'>Delete a Specific Assignment</h2><div class="highlight"><pre class="highlight shell tab-shell"><code>curl <span class="s1">'https://b418a5.herokuapp.com/api/assignments/2'</span> <span class="se">\</span>
+  <span class="nt">-X</span> DELETE
+</code></pre></div>
+<blockquote>
+<p>The above command returns JSON structured like this:</p>
+</blockquote>
+<div class="highlight"><pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+  </span><span class="nl">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"deleted"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">":("</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre></div>
+<p>This endpoint deletes a specific assignment.</p>
+<h3 id='http-request-3'>HTTP Request</h3>
+<p><code>DELETE https://b418a5.herokuapp.com/api/assignments/&lt;ID&gt;</code></p>
+<h3 id='url-parameters-2'>URL Parameters</h3>
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>ID</td>
+<td>The ID of the assignment to delete</td>
+</tr>
+</tbody></table>
+<h1 id='attendances'>Attendances</h1><h2 id='the-attendance-object'>The attendance object</h2>
+<p>The attendance object.</p>
+
+<blockquote>
+<p>The attendance object:</p>
+</blockquote>
+<div class="highlight"><pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+  </span><span class="nl">"id"</span><span class="p">:</span><span class="mi">1</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"date"</span><span class="p">:</span><span class="s2">"2021-09-15T19:37:30"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"note"</span><span class="p">:</span><span class="s2">""</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"present"</span><span class="p">:</span><span class="kc">true</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"late"</span><span class="p">:</span><span class="kc">false</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre></div><h3 id='attributes'>Attributes</h3>
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th style="text-align: left">Type</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>id</td>
+<td style="text-align: left">int</td>
+<td>Unique identifier for the object.</td>
+</tr>
+<tr>
+<td>date</td>
+<td style="text-align: left">Date</td>
+<td>The attendance’s date.</td>
+</tr>
+<tr>
+<td>note</td>
+<td style="text-align: left">String</td>
+<td>The attendance’s note.</td>
+</tr>
+<tr>
+<td>present</td>
+<td style="text-align: left">Boolean</td>
+<td>The attendance’s present value.</td>
+</tr>
+<tr>
+<td>late</td>
+<td style="text-align: left">Boolean</td>
+<td>The attendance’s late value.</td>
+</tr>
+</tbody></table>
+<h2 id='get-all-attendances'>Get All Attendances</h2><div class="highlight"><pre class="highlight shell tab-shell"><code>curl <span class="s1">'https://b418a5.herokuapp.com/api/attendances'</span>
+</code></pre></div>
+<blockquote>
+<p>The above command returns JSON structured like this:</p>
+</blockquote>
+<div class="highlight"><pre class="highlight json tab-json"><code><span class="p">[</span><span class="w">
+  </span><span class="p">{</span><span class="w">
+    </span><span class="nl">"id"</span><span class="p">:</span><span class="mi">1</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"date"</span><span class="p">:</span><span class="s2">"2021-09-15T19:37:30"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"note"</span><span class="p">:</span><span class="s2">""</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"present"</span><span class="p">:</span><span class="kc">true</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"late"</span><span class="p">:</span><span class="kc">false</span><span class="w">
+  </span><span class="p">}</span><span class="w">
+  </span><span class="p">{</span><span class="err">...</span><span class="p">},</span><span class="w">
+  </span><span class="p">{</span><span class="err">...</span><span class="p">}</span><span class="w">
+</span><span class="p">]</span><span class="w">
+</span></code></pre></div>
+<p>This endpoint retrieves all attendances.</p>
+<h3 id='http-request'>HTTP Request</h3>
+<p><code>GET https://b418a5.herokuapp.com/api/attendances</code></p>
+<h3 id='parameters'>Parameters</h3>
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>course_id</td>
+<td>Only return attendances with the given course id.</td>
+</tr>
+<tr>
+<td>student_id</td>
+<td>Only return attendances with the given student id.</td>
+</tr>
+</tbody></table>
+<h3 id='returns'>Returns</h3>
+<p>Returns a list of all attendances query runs.</p>
+
+<aside class="success">
+Remember — a happy user is an authenticated user!
+</aside>
+<h2 id='get-a-specific-attendance'>Get a Specific Attendance</h2><div class="highlight"><pre class="highlight shell tab-shell"><code>curl <span class="s1">'https://b418a5.herokuapp.com/api/attendances/1'</span>
+</code></pre></div>
+<blockquote>
+<p>The above command returns JSON structured like this:</p>
+</blockquote>
+<div class="highlight"><pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+  </span><span class="nl">"id"</span><span class="p">:</span><span class="mi">1</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"date"</span><span class="p">:</span><span class="s2">"2021-09-15T19:37:30"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"note"</span><span class="p">:</span><span class="s2">""</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"present"</span><span class="p">:</span><span class="kc">true</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"late"</span><span class="p">:</span><span class="kc">false</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre></div>
+<p>This endpoint retrieves a specific attendance.</p>
+
+<aside class="warning">Inside HTML code blocks like this one, you can't use Markdown, so use <code>&lt;code&gt;</code> blocks to denote code.</aside>
+<h3 id='http-request-2'>HTTP Request</h3>
+<p><code>GET https://b418a5.herokuapp.com/api/attendances/&lt;id&gt;</code></p>
+<h3 id='url-parameters'>URL Parameters</h3>
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>id</td>
+<td>The id of the course to retrieve</td>
+</tr>
+<tr>
+<td>course_id</td>
+<td>Only return attendances with the given student id.</td>
+</tr>
+<tr>
+<td>student_id</td>
+<td>Only return attendances with the given student id.</td>
+</tr>
+</tbody></table>
+<h2 id='delete-a-specific-attendance'>Delete a Specific Attendance</h2><div class="highlight"><pre class="highlight shell tab-shell"><code>curl <span class="s1">'https://b418a5.herokuapp.com/api/attendances/2'</span> <span class="se">\</span>
+  <span class="nt">-X</span> DELETE
+</code></pre></div>
+<blockquote>
+<p>The above command returns JSON structured like this:</p>
+</blockquote>
+<div class="highlight"><pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+  </span><span class="nl">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"deleted"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">":("</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre></div>
+<p>This endpoint deletes a specific attendance.</p>
+<h3 id='http-request-3'>HTTP Request</h3>
+<p><code>DELETE https://b418a5.herokuapp.com/api/attendances/&lt;ID&gt;</code></p>
+<h3 id='url-parameters-2'>URL Parameters</h3>
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>ID</td>
+<td>The ID of the attendance to delete</td>
+</tr>
+</tbody></table>
+<h1 id='courses'>Courses</h1><h2 id='the-course-object'>The course object</h2>
+<p>The course object.</p>
+
+<blockquote>
+<p>The course object:</p>
+</blockquote>
+<div class="highlight"><pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+  </span><span class="nl">"id"</span><span class="p">:</span><span class="mi">1</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"title"</span><span class="p">:</span><span class="s2">"Elementary"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"content"</span><span class="p">:</span><span class="s2">"Empty"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"date"</span><span class="p">:</span><span class="s2">"2021-09-15"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"lastUpdated"</span><span class="p">:</span><span class="s2">"2021-09-15T19:37:30"</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre></div><h3 id='attributes'>Attributes</h3>
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th style="text-align: left">Type</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>id</td>
+<td style="text-align: left">String</td>
+<td>Unique identifier for the object.</td>
+</tr>
+<tr>
+<td>title</td>
+<td style="text-align: left">String</td>
+<td>The course’s first name.</td>
+</tr>
+<tr>
+<td>content</td>
+<td style="text-align: left">String</td>
+<td>The course’s last name.</td>
+</tr>
+<tr>
+<td>date</td>
+<td style="text-align: left">String</td>
+<td>The course’s date.</td>
+</tr>
+<tr>
+<td>lastUpdated</td>
+<td style="text-align: left">Date</td>
+<td>The course’s last updated date.</td>
+</tr>
+</tbody></table>
+<h2 id='get-all-courses'>Get All Courses</h2><div class="highlight"><pre class="highlight shell tab-shell"><code>curl <span class="s1">'https://b418a5.herokuapp.com/api/courses'</span>
+</code></pre></div>
+<blockquote>
+<p>The above command returns JSON structured like this:</p>
+</blockquote>
+<div class="highlight"><pre class="highlight json tab-json"><code><span class="p">[</span><span class="w">
+  </span><span class="p">{</span><span class="w">
+    </span><span class="nl">"id"</span><span class="p">:</span><span class="mi">1</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"title"</span><span class="p">:</span><span class="s2">"Elementary"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"content"</span><span class="p">:</span><span class="s2">"Empty"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"date"</span><span class="p">:</span><span class="s2">"2021-09-15"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"lastUpdated"</span><span class="p">:</span><span class="s2">"2021-09-15T19:37:30"</span><span class="w">
+  </span><span class="p">},</span><span class="w">
+  </span><span class="p">{</span><span class="err">...</span><span class="p">},</span><span class="w">
+  </span><span class="p">{</span><span class="err">...</span><span class="p">}</span><span class="w">
+</span><span class="p">]</span><span class="w">
+</span></code></pre></div>
+<p>This endpoint retrieves all courses.</p>
+<h3 id='http-request'>HTTP Request</h3>
+<p><code>GET https://b418a5.herokuapp.com/api/courses</code></p>
+<h3 id='parameters'>Parameters</h3>
+<p>No parameters.</p>
+<h3 id='returns'>Returns</h3>
+<p>Returns the course object if the update succeeded.</p>
+
+<aside class="success">
+Remember — a happy user is an authenticated user!
+</aside>
+<h2 id='get-a-specific-course'>Get a Specific Course</h2><div class="highlight"><pre class="highlight shell tab-shell"><code>curl <span class="s1">'https://b418a5.herokuapp.com/api/courses/1'</span>
+</code></pre></div>
+<blockquote>
+<p>The above command returns JSON structured like this:</p>
+</blockquote>
+<div class="highlight"><pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+  </span><span class="nl">"id"</span><span class="p">:</span><span class="mi">1</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"title"</span><span class="p">:</span><span class="s2">"Elementary"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"content"</span><span class="p">:</span><span class="s2">"Empty"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"date"</span><span class="p">:</span><span class="s2">"2021-09-15"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"lastUpdated"</span><span class="p">:</span><span class="s2">"2021-09-15T19:37:30"</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre></div>
+<p>This endpoint retrieves a specific kitten.</p>
+
+<aside class="warning">Inside HTML code blocks like this one, you can't use Markdown, so use <code>&lt;code&gt;</code> blocks to denote code.</aside>
+<h3 id='http-request-2'>HTTP Request</h3>
+<p><code>GET https://b418a5.herokuapp.com/api/courses/&lt;id&gt;</code></p>
+<h3 id='url-parameters'>URL Parameters</h3>
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>id</td>
+<td>The id of the course to retrieve</td>
+</tr>
+<tr>
+<td>student_id</td>
+<td>Only return courses with the given student id.</td>
+</tr>
+</tbody></table>
+<h2 id='delete-a-specific-course'>Delete a Specific Course</h2><div class="highlight"><pre class="highlight shell tab-shell"><code>curl <span class="s1">'https://b418a5.herokuapp.com/api/courses/2'</span> <span class="se">\</span>
+  <span class="nt">-X</span> DELETE
+</code></pre></div>
+<blockquote>
+<p>The above command returns JSON structured like this:</p>
+</blockquote>
+<div class="highlight"><pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+  </span><span class="nl">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"deleted"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">":("</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre></div>
+<p>This endpoint deletes a specific course.</p>
+<h3 id='http-request-3'>HTTP Request</h3>
+<p><code>DELETE https://b418a5.herokuapp.com/api/courses/&lt;ID&gt;</code></p>
+<h3 id='url-parameters-2'>URL Parameters</h3>
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>ID</td>
+<td>The ID of the course to delete</td>
+</tr>
+</tbody></table>
+<h1 id='feedback'>Feedback</h1><h2 id='the-feedback-object'>The feedback object</h2>
+<p>The feedback object.</p>
+
+<blockquote>
+<p>The feedback object:</p>
+</blockquote>
+<div class="highlight"><pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+  </span><span class="nl">"id"</span><span class="p">:</span><span class="mi">1</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"date"</span><span class="p">:</span><span class="s2">"2021-09-15T19:37:29"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"content"</span><span class="p">:</span><span class="s2">"Algo que realmente aprecio de esta plataforma es su sencillez."</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre></div><h3 id='attributes'>Attributes</h3>
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th style="text-align: left">Type</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>id</td>
+<td style="text-align: left">int</td>
+<td>Unique identifier for the object.</td>
+</tr>
+<tr>
+<td>date</td>
+<td style="text-align: left">Date</td>
+<td>The feedback’s date.</td>
+</tr>
+<tr>
+<td>content</td>
+<td style="text-align: left">String</td>
+<td>The feedback’s note.</td>
+</tr>
+</tbody></table>
+<h2 id='get-all-feedback'>Get All Feedback</h2><div class="highlight"><pre class="highlight shell tab-shell"><code>curl <span class="s1">'https://b418a5.herokuapp.com/api/feedback'</span>
+</code></pre></div>
+<blockquote>
+<p>The above command returns JSON structured like this:</p>
+</blockquote>
+<div class="highlight"><pre class="highlight json tab-json"><code><span class="p">[</span><span class="w">
+  </span><span class="p">{</span><span class="w">
+    </span><span class="nl">"id"</span><span class="p">:</span><span class="mi">1</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"date"</span><span class="p">:</span><span class="s2">"2021-09-15T19:37:30"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"note"</span><span class="p">:</span><span class="s2">""</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"present"</span><span class="p">:</span><span class="kc">true</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"late"</span><span class="p">:</span><span class="kc">false</span><span class="w">
+  </span><span class="p">}</span><span class="w">
+  </span><span class="p">{</span><span class="err">...</span><span class="p">},</span><span class="w">
+  </span><span class="p">{</span><span class="err">...</span><span class="p">}</span><span class="w">
+</span><span class="p">]</span><span class="w">
+</span></code></pre></div>
+<p>This endpoint retrieves all feedback.</p>
+<h3 id='http-request'>HTTP Request</h3>
+<p><code>GET https://b418a5.herokuapp.com/api/feedback</code></p>
+<h3 id='parameters'>Parameters</h3>
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>course_id</td>
+<td>Only return feedback with the given course id.</td>
+</tr>
+<tr>
+<td>student_id</td>
+<td>Only return feedback with the given student id.</td>
+</tr>
+</tbody></table>
+<h3 id='returns'>Returns</h3>
+<p>Returns a list of all feedback query runs.</p>
+
+<aside class="success">
+Remember — a happy user is an authenticated user!
+</aside>
+<h2 id='get-a-specific-feedback'>Get a Specific Feedback</h2><div class="highlight"><pre class="highlight shell tab-shell"><code>curl <span class="s1">'https://b418a5.herokuapp.com/api/feedback/1'</span>
+</code></pre></div>
+<blockquote>
+<p>The above command returns JSON structured like this:</p>
+</blockquote>
+<div class="highlight"><pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+  </span><span class="nl">"id"</span><span class="p">:</span><span class="mi">1</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"date"</span><span class="p">:</span><span class="s2">"2021-09-15T19:37:30"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"note"</span><span class="p">:</span><span class="s2">""</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"present"</span><span class="p">:</span><span class="kc">true</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"late"</span><span class="p">:</span><span class="kc">false</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre></div>
+<p>This endpoint retrieves a specific feedback.</p>
+
+<aside class="warning">Inside HTML code blocks like this one, you can't use Markdown, so use <code>&lt;code&gt;</code> blocks to denote code.</aside>
+<h3 id='http-request-2'>HTTP Request</h3>
+<p><code>GET https://b418a5.herokuapp.com/api/feedback/&lt;id&gt;</code></p>
+<h3 id='url-parameters'>URL Parameters</h3>
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>id</td>
+<td>The id of the course to retrieve</td>
+</tr>
+<tr>
+<td>course_id</td>
+<td>Only return feedback with the given student id.</td>
+</tr>
+<tr>
+<td>student_id</td>
+<td>Only return feedback with the given student id.</td>
+</tr>
+</tbody></table>
+<h2 id='delete-a-specific-feedback'>Delete a Specific Feedback</h2><div class="highlight"><pre class="highlight shell tab-shell"><code>curl <span class="s1">'https://b418a5.herokuapp.com/api/feedback/2'</span> <span class="se">\</span>
+  <span class="nt">-X</span> DELETE
+</code></pre></div>
+<blockquote>
+<p>The above command returns JSON structured like this:</p>
+</blockquote>
+<div class="highlight"><pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+  </span><span class="nl">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"deleted"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">":("</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre></div>
+<p>This endpoint deletes a specific feedback.</p>
+<h3 id='http-request-3'>HTTP Request</h3>
+<p><code>DELETE https://b418a5.herokuapp.com/api/feedback/&lt;ID&gt;</code></p>
+<h3 id='url-parameters-2'>URL Parameters</h3>
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>ID</td>
+<td>The ID of the feedback to delete</td>
+</tr>
+</tbody></table>
+<h1 id='files'>Files</h1><h2 id='the-file-object'>The file object</h2>
+<p>The file object.</p>
+
+<blockquote>
+<p>The file object:</p>
+</blockquote>
+<div class="highlight"><pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+  </span><span class="nl">"id"</span><span class="p">:</span><span class="mi">1</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"name"</span><span class="p">:</span><span class="s2">"2021-09-15T19:37:30"</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre></div><h3 id='attributes'>Attributes</h3>
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th style="text-align: left">Type</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>id</td>
+<td style="text-align: left">int</td>
+<td>Unique identifier for the object.</td>
+</tr>
+<tr>
+<td>name</td>
+<td style="text-align: left">String</td>
+<td>The file’s date.</td>
+</tr>
+</tbody></table>
+<h2 id='get-all-files'>Get All Files</h2><div class="highlight"><pre class="highlight shell tab-shell"><code>curl <span class="s1">'https://b418a5.herokuapp.com/api/files'</span>
+</code></pre></div>
+<blockquote>
+<p>The above command returns JSON structured like this:</p>
+</blockquote>
+<div class="highlight"><pre class="highlight json tab-json"><code><span class="p">[</span><span class="w">
+  </span><span class="p">{</span><span class="w">
+    </span><span class="nl">"id"</span><span class="p">:</span><span class="mi">1</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"date"</span><span class="p">:</span><span class="s2">"2021-09-15T19:37:30"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"note"</span><span class="p">:</span><span class="s2">""</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"present"</span><span class="p">:</span><span class="kc">true</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"late"</span><span class="p">:</span><span class="kc">false</span><span class="w">
+  </span><span class="p">}</span><span class="w">
+  </span><span class="p">{</span><span class="err">...</span><span class="p">},</span><span class="w">
+  </span><span class="p">{</span><span class="err">...</span><span class="p">}</span><span class="w">
+</span><span class="p">]</span><span class="w">
+</span></code></pre></div>
+<p>This endpoint retrieves all files.</p>
+<h3 id='http-request'>HTTP Request</h3>
+<p><code>GET https://b418a5.herokuapp.com/api/files</code></p>
+<h3 id='parameters'>Parameters</h3>
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>course_id</td>
+<td>Only return files with the given course id.</td>
+</tr>
+<tr>
+<td>student_id</td>
+<td>Only return files with the given student id.</td>
+</tr>
+</tbody></table>
+<h3 id='returns'>Returns</h3>
+<p>Returns a list of all files query runs.</p>
+
+<aside class="success">
+Remember — a happy user is an authenticated user!
+</aside>
+<h2 id='get-a-specific-file'>Get a Specific File</h2><div class="highlight"><pre class="highlight shell tab-shell"><code>curl <span class="s1">'https://b418a5.herokuapp.com/api/files/1'</span>
+</code></pre></div>
+<blockquote>
+<p>The above command returns JSON structured like this:</p>
+</blockquote>
+<div class="highlight"><pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+  </span><span class="nl">"id"</span><span class="p">:</span><span class="mi">1</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"date"</span><span class="p">:</span><span class="s2">"2021-09-15T19:37:30"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"note"</span><span class="p">:</span><span class="s2">""</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"present"</span><span class="p">:</span><span class="kc">true</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"late"</span><span class="p">:</span><span class="kc">false</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre></div>
+<p>This endpoint retrieves a specific file.</p>
+
+<aside class="warning">Inside HTML code blocks like this one, you can't use Markdown, so use <code>&lt;code&gt;</code> blocks to denote code.</aside>
+<h3 id='http-request-2'>HTTP Request</h3>
+<p><code>GET https://b418a5.herokuapp.com/api/files/&lt;id&gt;</code></p>
+<h3 id='url-parameters'>URL Parameters</h3>
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>id</td>
+<td>The id of the file to retrieve</td>
+</tr>
+<tr>
+<td>course_id</td>
+<td>Only return files with the given student id.</td>
+</tr>
+<tr>
+<td>student_id</td>
+<td>Only return files with the given student id.</td>
+</tr>
+</tbody></table>
+<h2 id='delete-a-specific-file'>Delete a Specific File</h2><div class="highlight"><pre class="highlight shell tab-shell"><code>curl <span class="s1">'https://b418a5.herokuapp.com/api/files/2'</span> <span class="se">\</span>
+  <span class="nt">-X</span> DELETE
+</code></pre></div>
+<blockquote>
+<p>The above command returns JSON structured like this:</p>
+</blockquote>
+<div class="highlight"><pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+  </span><span class="nl">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"deleted"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">":("</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre></div>
+<p>This endpoint deletes a specific file.</p>
+<h3 id='http-request-3'>HTTP Request</h3>
+<p><code>DELETE https://b418a5.herokuapp.com/api/files/&lt;ID&gt;</code></p>
+<h3 id='url-parameters-2'>URL Parameters</h3>
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>ID</td>
+<td>The ID of the file to delete</td>
+</tr>
+</tbody></table>
+<h1 id='users'>Users</h1><h2 id='the-user-object'>The user object</h2>
+<p>The user object.</p>
+
+<blockquote>
+<p>The user object:</p>
+</blockquote>
+<div class="highlight"><pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+  </span><span class="nl">"id"</span><span class="p">:</span><span class="mi">1</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"firstName"</span><span class="p">:</span><span class="s2">"Kratos"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"lastName"</span><span class="p">:</span><span class="s2">"Cedric"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"email"</span><span class="p">:</span><span class="s2">"cedric@mail.com"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"role"</span><span class="p">:</span><span class="s2">"GUEST"</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre></div><h3 id='attributes'>Attributes</h3>
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th style="text-align: left">Type</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>id</td>
+<td style="text-align: left">String</td>
+<td>Unique identifier for the object.</td>
+</tr>
+<tr>
+<td>firstName</td>
+<td style="text-align: left">String</td>
+<td>The user’s first name.</td>
+</tr>
+<tr>
+<td>lastName</td>
+<td style="text-align: left">String</td>
+<td>The user’s last name.</td>
+</tr>
+<tr>
+<td>email</td>
+<td style="text-align: left">String</td>
+<td>The user’s email.</td>
+</tr>
+<tr>
+<td>role</td>
+<td style="text-align: left">String</td>
+<td>The user’s role.</td>
+</tr>
+</tbody></table>
+<h2 id='get-all-users'>Get All Users</h2><div class="highlight"><pre class="highlight shell tab-shell"><code>curl <span class="s1">'https://b418a5.herokuapp.com/api/users'</span>
+</code></pre></div>
+<blockquote>
+<p>The above command returns JSON structured like this:</p>
+</blockquote>
+<div class="highlight"><pre class="highlight json tab-json"><code><span class="p">[</span><span class="w">
+  </span><span class="p">{</span><span class="w">
+    </span><span class="nl">"id"</span><span class="p">:</span><span class="mi">1</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"firstName"</span><span class="p">:</span><span class="s2">"Kratos"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"lastName"</span><span class="p">:</span><span class="s2">"Cedric"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"email"</span><span class="p">:</span><span class="s2">"cedric@mail.com"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"role"</span><span class="p">:</span><span class="s2">"GUEST"</span><span class="w">
+  </span><span class="p">},</span><span class="w">
+  </span><span class="p">{</span><span class="w">
+    </span><span class="nl">"id"</span><span class="p">:</span><span class="mi">2</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"firstName"</span><span class="p">:</span><span class="s2">"Laokoon"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"lastName"</span><span class="p">:</span><span class="s2">"Sunitha"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"email"</span><span class="p">:</span><span class="s2">"sunitha@mail.com"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"role"</span><span class="p">:</span><span class="s2">"GUEST"</span><span class="w">
+  </span><span class="p">}</span><span class="w">
+</span><span class="p">]</span><span class="w">
+</span></code></pre></div>
+<p>This endpoint retrieves all users.</p>
+<h3 id='http-request'>HTTP Request</h3>
+<p><code>GET https://b418a5.herokuapp.com/api/users</code></p>
+<h3 id='parameters'>Parameters</h3>
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>course_id</td>
+<td>Only return users with the given course id.</td>
+</tr>
+</tbody></table>
+<h3 id='returns'>Returns</h3>
+<p>Returns the user object if the update succeeded.</p>
+
+<aside class="success">
+Remember — a happy user is an authenticated user!
+</aside>
+<h2 id='get-a-specific-user'>Get a Specific User</h2><div class="highlight"><pre class="highlight shell tab-shell"><code>curl <span class="s1">'https://b418a5.herokuapp.com/api/users/1'</span>
+</code></pre></div>
+<blockquote>
+<p>The above command returns JSON structured like this:</p>
+</blockquote>
+<div class="highlight"><pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+  </span><span class="nl">"id"</span><span class="p">:</span><span class="mi">1</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"firstName"</span><span class="p">:</span><span class="s2">"Kratos"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"lastName"</span><span class="p">:</span><span class="s2">"Cedric"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"email"</span><span class="p">:</span><span class="s2">"cedric@mail.com"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"role"</span><span class="p">:</span><span class="s2">"GUEST"</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre></div>
+<p>This endpoint retrieves a specific kitten.</p>
+
+<aside class="warning">Inside HTML code blocks like this one, you can't use Markdown, so use <code>&lt;code&gt;</code> blocks to denote code.</aside>
+<h3 id='http-request-2'>HTTP Request</h3>
+<p><code>GET https://b418a5.herokuapp.com/api/users/&lt;ID&gt;</code></p>
+<h3 id='url-parameters'>URL Parameters</h3>
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>ID</td>
+<td>The ID of the user to retrieve</td>
+</tr>
+</tbody></table>
+<h2 id='delete-a-specific-user'>Delete a Specific User</h2><div class="highlight"><pre class="highlight shell tab-shell"><code>curl <span class="s1">'https://b418a5.herokuapp.com/api/users/2'</span> <span class="se">\</span>
+  <span class="nt">-X</span> DELETE
+</code></pre></div>
+<blockquote>
+<p>The above command returns JSON structured like this:</p>
+</blockquote>
+<div class="highlight"><pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+  </span><span class="nl">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"deleted"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">":("</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre></div>
+<p>This endpoint deletes a specific kitten.</p>
+<h3 id='http-request-3'>HTTP Request</h3>
+<p><code>DELETE https://b418a5.herokuapp.com/api/users/&lt;ID&gt;</code></p>
+<h3 id='url-parameters-2'>URL Parameters</h3>
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>ID</td>
+<td>The ID of the user to delete</td>
+</tr>
+</tbody></table>
+<h1 id='errors'>Errors</h1>
+<aside class="notice">
+This error section is stored in a separate file in <code>includes/_errors.md</code>. Slate allows you to optionally separate out your docs into many files...just save them to the <code>includes</code> folder and add them to the top of your <code>index.md</code>'s frontmatter. Files are included in the order listed.
+</aside>
+
+<p>The Kittn API uses the following error codes:</p>
+
+<table><thead>
+<tr>
+<th>Error Code</th>
+<th>Meaning</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>400</td>
+<td>Bad Request -- Your request is invalid.</td>
+</tr>
+<tr>
+<td>401</td>
+<td>Unauthorized -- Your API key is wrong.</td>
+</tr>
+<tr>
+<td>403</td>
+<td>Forbidden -- The kitten requested is hidden for administrators only.</td>
+</tr>
+<tr>
+<td>404</td>
+<td>Not Found -- The specified kitten could not be found.</td>
+</tr>
+<tr>
+<td>405</td>
+<td>Method Not Allowed -- You tried to access a kitten with an invalid method.</td>
+</tr>
+<tr>
+<td>406</td>
+<td>Not Acceptable -- You requested a format that isn&#39;t json.</td>
+</tr>
+<tr>
+<td>410</td>
+<td>Gone -- The kitten requested has been removed from our servers.</td>
+</tr>
+<tr>
+<td>418</td>
+<td>I&#39;m a teapot.</td>
+</tr>
+<tr>
+<td>429</td>
+<td>Too Many Requests -- You&#39;re requesting too many kittens! Slow down!</td>
+</tr>
+<tr>
+<td>500</td>
+<td>Internal Server Error -- We had a problem with our server. Try again later.</td>
+</tr>
+<tr>
+<td>503</td>
+<td>Service Unavailable -- We&#39;re temporarily offline for maintenance. Please try again later.</td>
+</tr>
+</tbody></table>
+
+      </div>
+      <div class="dark-box">
+          <div class="lang-selector">
+                <a href="#" data-language-name="shell">shell</a>
+          </div>
+      </div>
+    </div>
+  </body>
+</html>
